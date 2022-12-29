@@ -1,0 +1,168 @@
+{
+    "alumno":{
+        "persona":{
+            
+            "nombres":string,
+            "apellidos": string,
+            "numeroDocumento": string,
+            "tipoDocumento":string,
+            "genero": idGenero, // enum["M","F","O","S"] 
+            "grupoFactor": string, // enum["A+","A-","B+","B-","0+","0-","AB+", "AB-"],
+            "nacionalidad": idPais,  // enum["AR","EX"] 
+            "procedenciaEscolar": string,
+            "domicilioRecidencia":{
+                "domicilioPadre": boolean, // true
+                "domicilioMadre": boolean, // true
+                "domicilioTutor": boolean, // true
+                "pais": "Argentina",
+                "provincia":  "Catamarca",
+                "localidad": idLocalidad,
+                "codigoPostal":number,
+                "barrio":string,
+                "calle":string,
+                "numeroCalle":number,
+                "piso":number,
+                "departamento":string,
+            },
+            "datosContacto":{
+                "telefono": string,
+                "telefonoSec": string, // Opcional
+                "correo": string,
+            }
+        }
+    },
+    "padre":{
+        "persona":{
+            "nombres":string,
+            "apellidos": string,
+            "numeroDocumento": string,
+            "tipoDocumento":string,
+            "genero":string, // enum["M","F","O","S"],
+            "nacionalidad":idPais, // enum["AR","OT"] 
+            "parentezco": string, 
+            "domicilioRecidencia":{
+                "domicilioTutor": boolean,
+                "pais": idPais, //  Argentino / Extrangero
+                "provincia": idProvincia,
+                "localidad": idLocalidad,
+                "codigoPostal":number, 
+                "barrio":string,
+                "calle":string,
+                "numeroCalle":number,
+                "piso":number,
+                "departamento":number,
+            },
+            "datosLaborales": {
+                "ocupacion":string,
+                "domicilioLaboral":{
+                    //"pais":idPais,
+                    //"provincia": idProvincia,
+                    "localidad": idLocalidad,
+                    "barrio":string,
+                    "calle":string,
+                    "numeroCalle":number,
+                    "piso":number,
+                    "departamento":number,
+                }
+            },
+            "datosContacto":{
+                "telefono": string,
+                "telefonoSec": string, Opcional,
+                "correo": string,
+            }
+        }
+    },
+    "madre":{
+        "nombres":string,
+        "apellidos": string,
+        "numeroDocumento": string,
+        "tipoDocumento":string,
+        "genero":string, // enum["M","F","O","S"],
+        "nacionalidad":idPais, // enum["AR","OT"] 
+        "parentezco": string, 
+        "domicilioRecidencia":{
+            "pais":idPais,
+            "provincia": idProvincia,
+            "localidad": idLocalidad, 
+            "codigoPostal":number, 
+            "barrio":string,
+            "calle":string,
+            "numeroCalle":number,
+            "piso":number,
+            "departamento":number,
+        },
+        "datosLaborales": {
+            "ocupacion":string,
+            "domicilioLaboral":{
+                //"pais":idPais,
+                //"provincia": idProvincia,
+                "localidad": idLocalidad,
+                "barrio":string,
+                "calle":string,
+                "numeroCalle":number,
+                "piso":number,
+                "departamento":number,
+            }
+        },
+        "datosContacto":{
+            "telefono": string,
+            "telefonoSec": string, Opcional,
+            "correo": string,
+        }
+    },
+    "tutor":{
+        "tipo": string default ="Responsable", ? "Representante"
+        "nombres":string,
+        "apellidos": string,
+        "numeroDocumento": string,
+        "tipoDocumento": string,
+        "genero": string, // enum["M","F","O","S"],
+        "nacionalidad":idPais, // string | enum["AR","OT"] | idPais,
+        "parentezco": string, 
+        "domicilioRecidencia":{
+            "pais": idPais,
+            "provincia": String,
+            "localidad": String, 
+            "codigoPostal":number, 
+            "barrio": string,
+            "calle": string,
+            "numeroCalle":number,
+            "piso":number,
+            "departamento":number,
+        },
+        "datosLaborales": {
+            "ocupacion":string,
+            "domicilioLaboral":{
+                //"pais":idPais,
+                //"provincia": idProvincia,
+                "localidad": String,
+                "barrio":string,
+                "calle":string,
+                "numeroCalle":number,
+                "piso":number,
+                "departamento":number,
+            }
+        },
+        "datosContacto":{
+            "telefono": string,
+            "telefonoSec": string, Opcional,
+            "correo": string,
+        }
+    },
+    "domicilioCompartido": boolean
+    "documentos": files[]
+}
+
+
+"file" : {
+    "archivo" : File,
+    "nombre": string,
+    "ext": string
+}
+
+// encargado -> cursos[]
+// representante -> alumnos[]
+// responsable -> tutor madre padre
+
+// https://datosgobar.github.io/georef-ar-api/open-api/#/Recursos/get_departamentos
+

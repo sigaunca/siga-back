@@ -1,0 +1,22 @@
+{
+    "db_atlas_b": "mongodb+srv://LucasAgDiaz:Aa149521bB@cluster.sh7lw.mongodb.net/tesis",
+    "db_atlas_a": "mongodb+srv://maurodmachado:root@cluster0.r0rc9.mongodb.net/tesis",
+    "db_atlas": "mongodb+srv://maurodmachado:root@cluster0.r0rc9.mongodb.net/tesis-dev",
+    "secret_jwt": "tesis",
+    "recovery_path": "/new-password",
+    "recovery_server": "http://localhost:3000",
+    "nodemailer_user": "siga.unca.info@gmail.com",
+    "nodemailer_password": "pigzjpwkavqtgdrf",
+    "password_default": "NONE",
+    "environment": "desarrollo",
+    "port": 4000,
+    "host": "http://localhost:",
+    "first_start_date_day": "1",
+    "first_start_date_month": "3",
+    "first_trimester_end_date_day": "1",
+    "first_trimester_end_date_month": "5",
+    "second_trimester_end_date_day": "1",
+    "second_trimester_end_date_month": "7",
+    "third_trimester_end_date_day": "1",
+    "third_trimester_end_date_month": "11"
+}

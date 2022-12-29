@@ -1,0 +1,20 @@
+{
+    "db_atlas": "mongodb+srv://maurodmachado:root@cluster0.r0rc9.mongodb.net/tesis",
+    "secret_jwt": "tesis",
+    "recovery_path": "/new-password",
+    "recovery_server": "https://sigaunca-develop.netlify.app",
+    "nodemailer_user": "siga.unca.info@gmail.com",
+    "nodemailer_password": "pigzjpwkavqtgdrf",
+    "password_default": "NONE",
+    "environment": "test",
+    "port": 4000,
+    "host": "http://siga-unca-test.herokuapp.com",
+    "first_start_date_day": "1",
+    "first_start_date_month": "3",
+    "first_trimester_end_date_day": "1",
+    "first_trimester_end_date_month": "5",
+    "second_trimester_end_date_day": "1",
+    "second_trimester_end_date_month": "7",
+    "third_trimester_end_date_day": "1",
+    "third_trimester_end_date_month": "11"
+}

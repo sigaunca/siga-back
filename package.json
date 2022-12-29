@@ -1,0 +1,50 @@
+{
+    "name": "siga-back",
+    "version": "1.0.0",
+    "description": "SIGA UNCA",
+    "main": "index.js",
+    "scripts": {
+        "start": "node .",
+        "dev": "nodemon .",
+        "test": "cross-env --env=node jest --runInBand --detectOpenHandles --forceExit",
+        "prepare": "husky install",
+        "seeder": "node src/config/seeder.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "colors": "^1.4.0",
+        "config": "^3.3.7",
+        "cors": "^2.8.5",
+        "cross-env": "^7.0.3",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-validator": "^6.6.1",
+        "heroku": "^7.63.4",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.3.6",
+        "nodemailer": "^6.7.5"
+    },
+    "devDependencies": {
+        "@shelf/jest-mongodb": "^3.0.1",
+        "@types/jest": "^28.1.0",
+        "husky": "^8.0.0",
+        "jest": "^28.1.0",
+        "mongodb-memory-server": "^8.6.0",
+        "nodemon": "^2.0.15",
+        "supertest": "^6.2.3"
+    },
+    "optionalDependencies": {
+        "fsevents": "^2.3.2"
+    },
+    "engines": {
+        "node": "16.x"
+    },
+    "config": {
+        "mongodbMemoryServerOptions": {
+            "debug": "1",
+            "version": "4.0.3"
+        }
+    }
+}
